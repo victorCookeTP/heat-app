@@ -16,7 +16,6 @@ dist-ssr
 ngrok.exe
 ngrok   
 .env
-.env.*
 .vscode/*
 !.vscode/extensions.json
 .idea
