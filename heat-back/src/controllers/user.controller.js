@@ -26,7 +26,7 @@ const loginUser = async (req, res) => {
     const isValidPassword = await bcrypt.compare(password, user.password);
     if (!isValidPassword)
       return res.status(401).json({ error: "Contraseña incorrecta" });
-
+    delete user.password
     const token = jwt.sign({ id: user.uuid }, process.env.JWT_SECRET, {
       expiresIn: "24h",
     });
